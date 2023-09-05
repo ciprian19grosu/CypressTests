@@ -4,7 +4,7 @@
 
 describe('Our first suite', () => {
 
-   it('First test' , () => {
+  it('First test' , () => {
 
     cy.visit('/')
     cy.contains('Forms').click()
@@ -41,8 +41,8 @@ describe('Our first suite', () => {
     cy.get('[data-cy="imputEmail1"]')
 
 
-   })
-   it('Second test' , () => {
+  })
+  it('Second test' , () => {
 
     cy.visit('/')
     cy.contains('Forms').click()
@@ -61,8 +61,8 @@ describe('Our first suite', () => {
 
     cy.contains('nb-card','Horizontal form').find('[type="email"]')
 
-   })
-   it(' then and wrap methods' , () => {
+  })
+  it(' then and wrap methods' , () => {
 
     cy.visit('/')
     cy.contains('Forms').click()
@@ -83,8 +83,8 @@ describe('Our first suite', () => {
     })
           
       
-   })
-   it('Third test' , () => {
+  })
+  it('Third test' , () => {
 
     cy.visit('/')
     cy.contains('Forms').click()
@@ -102,7 +102,7 @@ describe('Our first suite', () => {
 
     })
    })
-   it('invoke command' , () => {
+  it('invoke command' , () => {
       
       cy.visit('/')
       cy.contains('Forms').click()
@@ -135,8 +135,8 @@ describe('Our first suite', () => {
         })
 
 
-   })
-   it('assert property', () => { 
+  })
+  it('assert property', () => { 
       function selectDayFromCurrent(day){
             let date = new Date()
             date.setDate(date.getDate() + day)
@@ -168,8 +168,8 @@ describe('Our first suite', () => {
          cy.wrap(input).invoke('prop', 'value').should('contain', 'May 17, 2023 - May 25, 2023')        
        })
          
-   })
-   it('radio buttons', () => {
+  })
+  it('radio buttons', () => {
       cy.visit('/')
       cy.contains('Forms').click()
       cy.contains('Form Layouts').click()
@@ -195,8 +195,8 @@ describe('Our first suite', () => {
     })
 
 
-   })
-   it('check bokes', () => {
+  })
+  it('check bokes', () => {
     cy.visit('/')
     cy.contains('Modal & Overlays').click()
     cy.contains('Toastr').click()
@@ -207,8 +207,8 @@ describe('Our first suite', () => {
 
 
 
-   })
-   it.only('lists and dropdowns', () => {
+  })
+  it.only('lists and dropdowns', () => {
         cy.visit('/')
         //1
         // cy.get('nav nb-select').click()
@@ -237,8 +237,8 @@ describe('Our first suite', () => {
         })
        
 
-   })
-   it('Web tables', () =>{
+  })
+  it('Web tables', () =>{
     cy.visit('/')
     cy.contains('Tables & Data').click()
     cy.contains('Smart Table').click()
@@ -280,8 +280,8 @@ describe('Our first suite', () => {
 
     
 
-}) 
-it('tooltips', () => {
+  }) 
+  it('tooltips', () => {
 
     cy.visit('/')
     cy.contains('Modal & Overlays').click()
@@ -290,8 +290,8 @@ it('tooltips', () => {
     cy.contains('nb-card','Colored Tooltips')
        .contains('Default').click()
     cy. get('nb-tooltip').should('contain', 'This is a tooltip')
-})
-it('Dialog box', () => {
+  })
+  it('Dialog box', () => {
     cy.visit('/')
     cy.contains('Tables & Data').click()
     cy.contains('Smart Table').click()
@@ -312,7 +312,7 @@ it('Dialog box', () => {
     //3
     cy.get('tbody tr').first().find('.nb-trash').click()
     cy.on('window:confirm', () => false)
-})
+  })
 
 
 })
