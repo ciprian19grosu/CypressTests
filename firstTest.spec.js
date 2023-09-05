@@ -209,14 +209,14 @@ describe('Our first suite', () => {
 
   })
   it.only('lists and dropdowns', () => {
-        cy.visit('/')
+    cy.visit('/')
         //1
         // cy.get('nav nb-select').click()
         // cy.get('.options-list').contains('Dark').click()
         // cy.get('nav nb-select').should('contain', 'Dark')
         // cy.get('nb-layout-header nav').should('have.css', 'background-color', 'rgb(34, 43, 69)')
         //2
-        cy.get('nav nb-select').then( dropdown => {
+    cy.get('nav nb-select').then( dropdown => {
           cy.wrap(dropdown).click()
           cy.get('.options-list nb-option').each( (listItem, index) => {
                const itemText = listItem.text().trim()
@@ -234,7 +234,7 @@ describe('Our first suite', () => {
                cy.wrap(dropdown).click()
                }
           }) 
-        })
+    })
        
 
   })
@@ -289,7 +289,7 @@ describe('Our first suite', () => {
 
     cy.contains('nb-card','Colored Tooltips')
        .contains('Default').click()
-    cy. get('nb-tooltip').should('contain', 'This is a tooltip')
+    cy.get('nb-tooltip').should('contain', 'This is a tooltip')
   })
   it('Dialog box', () => {
     cy.visit('/')
